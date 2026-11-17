@@ -1,0 +1,143 @@
+/* Main styles for Aarush's personal portfolio */
+:root {
+  --ink: #202b36;
+  --muted: #65717b;
+  --paper: #f7f7f3;
+  --white: #ffffff;
+  --blue: #315b72;
+  --yellow: #e8bd58;
+  --line: #dce1df;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1060px, calc(100% - 48px)); margin: 0 auto; }
+.site-header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header-inner {
+  width: min(1060px, calc(100% - 48px));
+  min-height: 72px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo { font-size: 21px; font-weight: 700; letter-spacing: -1px; }
+.logo span { color: var(--blue); }
+nav { display: flex; gap: 30px; }
+nav a { color: var(--muted); font-size: 13px; }
+nav a:hover, footer a:hover { color: var(--blue); }
+.hero {
+  min-height: 570px;
+  padding-top: 92px;
+  padding-bottom: 85px;
+  display: grid;
+  grid-template-columns: 1.5fr .8fr;
+  gap: 70px;
+  align-items: center;
+}
+.small-heading, .section-number, .card-label, .category, .project-heading, .project-footnote {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+.small-heading { color: var(--blue); margin-bottom: 25px; }
+.small-heading span { color: #929b9d; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(45px, 6.5vw, 76px); line-height: 1.06; letter-spacing: -3.5px; margin-bottom: 23px; }
+h1 span, .contact h2 span { color: var(--blue); }
+.intro { max-width: 570px; color: var(--muted); font-size: 15px; line-height: 1.85; }
+.primary-link, .github-link {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 12px 17px;
+  background: var(--blue);
+  color: white;
+  font-size: 12px;
+}
+.primary-link:hover, .github-link:hover { background: var(--ink); }
+.hero-card { background: #e9eeeb; padding: 28px; min-height: 310px; display: flex; flex-direction: column; }
+.card-label { color: var(--blue); }
+.initials { width: 76px; height: 76px; margin: 23px 0; display: grid; place-items: center; background: var(--yellow); border-radius: 50%; font-size: 21px; font-weight: 700; }
+.hero-card h2 { font-size: 22px; margin-bottom: 5px; }
+.hero-card > p:not(.card-label) { color: var(--muted); font-size: 13px; }
+.card-bottom { margin-top: auto; padding-top: 18px; border-top: 1px solid #cbd5d1; color: var(--blue); font-size: 9px; letter-spacing: 1px; }
+.section { padding: 92px 0; border-top: 1px solid var(--line); }
+.two-column { display: grid; grid-template-columns: .8fr 1.2fr; gap: 75px; }
+.section-number { color: var(--blue); margin-bottom: 20px; }
+.section h2 { font-size: clamp(36px, 4.5vw, 52px); line-height: 1.1; letter-spacing: -2px; margin-bottom: 0; }
+.section-copy { padding-top: 27px; }
+.large-copy { font-size: 22px; line-height: 1.5; max-width: 620px; }
+.section-copy > p:not(.large-copy) { color: var(--muted); font-size: 14px; line-height: 1.9; }
+.results { display: flex; gap: 55px; border-top: 1px solid var(--line); margin-top: 38px; padding-top: 23px; }
+.results div { display: flex; flex-direction: column; }
+.results strong { font-size: 27px; color: var(--blue); }
+.results span { font-size: 11px; color: var(--muted); }
+.education { background: #edf0ec; }
+.section-title-row { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
+.section-title-row h2 { margin: 0; }
+.section-note { max-width: 310px; color: var(--muted); font-size: 13px; }
+.education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.education-card { background: var(--white); padding: 25px; min-height: 205px; border: 1px solid #e0e5e1; position: relative; }
+.card-index { float: right; color: #a4adab; font-size: 12px; }
+.category { color: var(--blue); margin-bottom: 23px; }
+.education-card h3 { font-size: 19px; line-height: 1.35; margin-bottom: 9px; }
+.education-card p:last-child { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+.note { margin: 18px 0 0; color: var(--muted); font-size: 12px; }
+.project-content { padding-top: 4px; }
+.project-card { padding: 27px; background: var(--white); border: 1px solid var(--line); }
+.project-heading { display: flex; justify-content: space-between; color: var(--blue); }
+.project-card h3 { margin: 32px 0 12px; font-size: 23px; }
+.project-card > p:not(.project-footnote) { max-width: 600px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.project-footnote { color: #8a9695; margin: 25px 0 0; }
+.coming-soon { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
+.skills { background: #edf0ec; }
+.skill-list { padding-top: 3px; }
+.skill { padding: 17px 0; border-bottom: 1px solid #d4ddda; }
+.skill:first-child { border-top: 1px solid #d4ddda; }
+.skill div { display: flex; justify-content: space-between; gap: 15px; }
+.skill strong { font-size: 15px; }
+.skill span { color: var(--blue); font-size: 11px; }
+.skill p { color: var(--muted); font-size: 12px; margin: 5px 0 0; }
+.contact { background: var(--ink); color: white; padding-bottom: 25px; }
+.contact .section-number { color: var(--yellow); }
+.contact h2 { font-size: clamp(48px, 7vw, 75px); line-height: 1.05; margin-bottom: 20px; }
+.contact h2 span { color: var(--yellow); }
+.contact-inner > p:not(.section-number) { max-width: 430px; color: #c2cbd0; font-size: 14px; }
+.github-link { background: var(--yellow); color: var(--ink); font-weight: 700; }
+.github-link:hover { background: white; }
+footer { display: flex; justify-content: space-between; gap: 20px; margin-top: 85px; padding-top: 17px; border-top: 1px solid #46515a; color: #c2cbd0; font-size: 11px; }
+
+@media (max-width: 720px) {
+  .container, .header-inner { width: min(100% - 36px, 560px); }
+  .header-inner { min-height: 66px; }
+  nav { gap: 14px; }
+  nav a { font-size: 11px; }
+  .hero { display: block; padding-top: 70px; }
+  h1 { letter-spacing: -2px; }
+  .hero-card { margin-top: 48px; }
+  .section { padding: 70px 0; }
+  .two-column { grid-template-columns: 1fr; gap: 30px; }
+  .section-copy { padding-top: 0; }
+  .section-title-row { display: block; }
+  .section-note { margin-top: 18px; }
+  .education-grid { grid-template-columns: 1fr; }
+  .results { gap: 32px; }
+}
+@media (max-width: 420px) {
+  .header-inner { align-items: flex-start; padding: 16px 0; gap: 14px; flex-direction: column; }
+  nav { width: 100%; justify-content: space-between; }
+  .small-heading span { display: block; margin-top: 5px; }
+  .results { gap: 23px; }
+  .skill div { flex-direction: column; gap: 2px; }
+  footer { flex-direction: column; }
+}
